@@ -6,6 +6,18 @@ The dataset was scraped by me in March 2025 and stored in a SQLite database. Sit
 The entire dataset (SQLite database and a CSV file) is available in "dataset.zip" file.
 
 ## Introduction - structure of the dataset
+
+**QUERY:**
+```
+SELECT DISTINCT COUNT(*) AS total_offers
+FROM car_dataset
+```
+
+**RESULT:**
+|    |   total_offers |
+|---:|---------------:|
+|  0 |         219808 |
+
 The dataset contains 219 808 entries in total and contains following data for each of them (26 columns in total):
 ```
 'id', 'title', 'price', 'city', 'region', 'n_parameters', 'make',
@@ -26,25 +38,18 @@ Explaination:
 - "year" - year of manufacture
 - "damaged" - binary value determining wether the car was damaged
 - "country_origin" - country of origin
-- "mileage" - self-explanatory
+- "mileage" - self-explanatory (expressed in kilometers)
 - "engine_capacity" - engine displacement expressed in cm3
 - "engine_power" - measured in horsepower (KM)
 - "fuel_type" - fuel used by the engine; most common include petrol, diesel and hybrid
 - "gearbox" - whether a car has a manual or automatic gearbox
-- "transmission type "
-
+- "transmission_type" - engine and transmission layout (e.g front-wheel, all-wheel-permanent)
+- "urban_consumption" - fuel consumption during urban driving expressed in liters per 100km (e.g 7.2l/100km)
+- "extra_urban_consumption" - fuel consumption while driving outside of urban areas expressed in liters per 100km (e.g 5.6l/100km)
+- "body_type" - body type of the car
 
 - "n_parameters" - artificial feature engineered during the process of scraping; I created it because the disclosure of most possible features (up to ~140)
-**QUERY:**
-```
-SELECT DISTINCT COUNT(*) AS total_offers
-FROM car_dataset
-```
 
-**RESULT:**
-|    |   total_offers |
-|---:|---------------:|
-|  0 |         219808 |
 
 ## Structure of the dataset
 **QUERY:**
