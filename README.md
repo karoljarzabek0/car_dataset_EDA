@@ -1,7 +1,7 @@
 # car_dataset_EDA
 # Exploratory Data Analysis of car offers from a large Polish marketplace
 This repo contains exploratory data analysis augmented with machine learning performed on over 200 000 car offers from a Polish online marketplace.
-The dataset was scraped by me in March 2025.
+The dataset was scraped by me in March 2025 and stored in a SQLite database. The entire dataset (SQLite database and a CSV file) is packaged into "dataset.zip" in this repository.
 
 **QUERY:**
 ```
