@@ -1,12 +1,12 @@
 # car_dataset_EDA
-# Exploratory Data Analysis of car offers from a large Polish marketplace
+# Exploratory Data Analysis of car offers from a Polish online marketplace
 This repo contains exploratory data analysis augmented with machine learning performed on over 200 000 car offers from a Polish online marketplace.
-The dataset was scraped by me in March 2025 and stored in a SQLite database. Site was scraped ethically respecting robots.txt file and without overloading the server with too many requests.
+The dataset was scraped by me in March 2025 and stored in a SQLite database. Site was scraped ethically respecting robots.txt file and without overloading the server with too many requests. The data is used STRICTLY for educational purposes. Other use of the data is prohibited.
 
 The entire dataset (SQLite database and a CSV file) is available in "dataset.zip" file.
 
 ## Introduction - structure of the dataset
-The dataset contains 219 808 entries in total and contains following data for each of them (27 columns in total):
+The dataset contains 219 808 entries in total and contains following data for each of them (26 columns in total):
 ```
 'id', 'title', 'price', 'city', 'region', 'n_parameters', 'make',
 'model', 'version', 'year', 'damaged', 'country_origin',
@@ -28,7 +28,10 @@ Explaination:
 - "country_origin" - country of origin
 - "mileage" - self-explanatory
 - "engine_capacity" - engine displacement expressed in cm3
-- "engine_power"
+- "engine_power" - measured in horsepower (KM)
+- "fuel_type" - fuel used by the engine; most common include petrol, diesel and hybrid
+- "gearbox" - whether a car has a manual or automatic gearbox
+- "transmission type "
 
 
 - "n_parameters" - artificial feature engineered during the process of scraping; I created it because the disclosure of most possible features (up to ~140)
