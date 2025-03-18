@@ -26,7 +26,7 @@ The dataset contains 219 808 entries in total and contains following data for ea
 'transmission', 'urban_consumption', 'extra_urban_consumption',
 'body_type', 'nr_seats', 'color', 'rhd', 'registered', 'no_accident'
 ```
-Explaination:
+Explanation:
 - "id" - unique identifier of the offer
 - "title" - title of the offer
 - "price" - price in PLN (Polish złoty)
@@ -36,7 +36,7 @@ Explaination:
 - "model" - model of the car
 - "version" - version of the car
 - "year" - year of manufacture
-- "damaged" - binary value determining wether the car was damaged
+- "damaged" - binary value determining if the car was damaged
 - "country_origin" - country of origin
 - "mileage" - self-explanatory (expressed in kilometers)
 - "engine_capacity" - engine displacement expressed in cm3
@@ -46,10 +46,14 @@ Explaination:
 - "transmission_type" - engine and transmission layout (e.g front-wheel, all-wheel-permanent)
 - "urban_consumption" - fuel consumption during urban driving expressed in liters per 100km (e.g 7.2l/100km)
 - "extra_urban_consumption" - fuel consumption while driving outside of urban areas expressed in liters per 100km (e.g 5.6l/100km)
-- "body_type" - body type of the car
+- "body_type" - car body style e.g suv, sedan, combi, compact
+- "nr_seats" - self-explanatory
+- "color" - self-explanatory
+- "rhd" - binary value determining if a car has a steering wheel on a right side of the cat ("Anglik" in Polish)
+- "registered" - binary value determining if a car is registered
+- "no_accident" - binary value determining if a car was a participant in a road accident
 
-- "n_parameters" - artificial feature engineered during the process of scraping; I created it because the disclosure of most possible features (up to ~140)
-
+- "n_parameters" - artificial feature engineered during the process of scraping; I created it because most of the offers include only the most basic specifications (eg. model, fuel type or mileage) while not disclosing others, creating a blank value during scraping. There are over 140 features the owner can disclose and some of them are really specific, like "leather_gearshifterswitch" meaning binary value for leather-finished gear shift. In order to avoid creating a bloated datasetet consisting out of columns that are mostly blank i decided to count the total number of features each owner decided to disclose. My assumption is (and is proved later in the report) that more the features the newer and more expensive the car. Older and cheaper cars often don't have those fancy features. The proccess of adding each of the feautres is often tedious and indviduals selling their cars are less likely to do that. That is opposed to enterprises selling cars in bulk that have the resources and a motive - selling those cars faster and for higher prices (more extravagant features can encourage the customer to finish the transaction)
 
 ## Structure of the dataset
 **QUERY:**
