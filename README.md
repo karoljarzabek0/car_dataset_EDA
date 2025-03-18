@@ -9,13 +9,29 @@ The entire dataset (SQLite database and a CSV file) is available in "dataset.zip
 The dataset contains 219 808 entries in total and contains following data for each of them (27 columns in total):
 ```
 'id', 'title', 'price', 'city', 'region', 'n_parameters', 'make',
-'model', 'version', 'year', 'damaged', 'is_imported', 'country_origin',
+'model', 'version', 'year', 'damaged', 'country_origin',
 'mileage', 'engine_capacity', 'engine_power', 'fuel_type', 'gearbox',
 'transmission', 'urban_consumption', 'extra_urban_consumption',
 'body_type', 'nr_seats', 'color', 'rhd', 'registered', 'no_accident'
 ```
+Explaination:
+- "id" - unique identifier of the offer
+- "title" - title of the offer
+- "price" - price in PLN (Polish złoty)
+- "city" - city of the offer
+- "region" - region of the offer (99% of offers come from one of Poland's 16 voivodeships)
+- "make" - manufacturer of the car
+- "model" - model of the car
+- "version" - version of the car
+- "year" - year of manufacture
+- "damaged" - binary value determining wether the car was damaged
+- "country_origin" - country of origin
+- "mileage" - self-explanatory
+- "engine_capacity" - engine displacement expressed in cm3
+- "engine_power"
 
 
+- "n_parameters" - artificial feature engineered during the process of scraping; I created it because the disclosure of most possible features (up to ~140)
 **QUERY:**
 ```
 SELECT DISTINCT COUNT(*) AS total_offers
