@@ -6,7 +6,7 @@ The dataset was scraped by me in March 2025 and stored in a SQLite database. Sit
 The entire dataset (SQLite database and a CSV file) is available in "dataset.zip" file.
 
 ## Introduction - structure of the dataset
-The dataset contains 219 808 entries in total and contains following data for each of them:
+The dataset contains 219 808 entries in total and contains following data for each of them (27 columns in total):
 ```
 'id', 'title', 'price', 'city', 'region', 'n_parameters', 'make',
 'model', 'version', 'year', 'damaged', 'is_imported', 'country_origin',
